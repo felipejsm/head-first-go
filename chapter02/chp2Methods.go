@@ -10,5 +10,8 @@ func main() {
 	lotsOfSpaces := "Origami Paper"
 	replacer := strings.NewReplacer("#", "o")
 	fixed := replacer.Replace(broken)
+	anotherReplacer := strings.NewReplacer(" ", "")
+	anotherFixed := anotherReplacer.Replace(lotsOfSpaces)
 	fmt.Println(fixed)
+	fmt.Println(anotherFixed)
 }
