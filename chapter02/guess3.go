@@ -24,9 +24,17 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	input := strings.TrimSpace(input)
+	input = strings.TrimSpace(input)
 	guess, err := strconv.Atoi(input)
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	if guess < target {
+		fmt.Println("low")
+	} else if guess > target {
+		fmt.Println("high")
+	} else {
+		fmt.Println("Bull's eye")
 	}
 }
