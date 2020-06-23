@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	myVar := "hooray"
 	fmt.Printf("A float: %f\n", 3.1415)
 	fmt.Printf("An integer: %d\n", 45)
 	fmt.Printf("A string: %s\n", "Bounce")
@@ -12,4 +13,5 @@ func main() {
 	fmt.Printf("Types: %T %T %T\n", 1.2, "\t", true)
 	fmt.Printf("Types as code: %#v %#v %#v\n", "\t", "", "\n")
 	fmt.Printf("Percent sign: %%\n")
+	fmt.Printf("Types as code: %#v\n", myVar)
 }
