@@ -32,8 +32,10 @@ func main() {
 	height, _ = strconv.ParseFloat(input, 64)
 
 	amount, newError := paintNeededWithMultipleReturn(width, height)
-	fmt.Println(newError)
-	fmt.Println("%0.2f liters needed\n", amount)
+	if newError != nil {
+		log.Fatal(newError)
+	}
+	fmt.Printf("%0.2f liters needed\n", amount)
 }
 
 func paintNeededWithMultipleReturn(width, height float64) (amount float64, err error) {
