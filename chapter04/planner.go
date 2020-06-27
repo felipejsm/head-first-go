@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// Main function that prints dates
 func main() {
 	days := 3
 	fmt.Println("Your appointment is in", days, "days")
