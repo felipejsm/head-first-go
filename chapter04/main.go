@@ -1,8 +1,13 @@
 package main
 
-import "greeting"
+import (
+	"greeting"
+	"greeting/deutsch"
+)
 
 func main() {
 	greeting.Hi()
 	greeting.Hello()
+	deutsch.Hallo()
+	deutsch.GutenTag()
 }
