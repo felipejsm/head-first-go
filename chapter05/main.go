@@ -1,9 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+
+	"github.com/headfirstgo/datafile"
+)
 
 func main() {
-	numbers := [3]float64{71.8, 56.2, 89.5}
+	numbers, err := datafile.GetFloats("C:\\moses-learning\\head-first-go\\chapter05\\data.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
 	var sum float64 = 0
 	for _, number := range numbers {
 		sum += number
