@@ -1,18 +1,35 @@
-package main
+package magazine
 
 import "fmt"
 
-func main() {
-	var subscriber struct {
-		name   string
-		rate   float64
-		active bool
-	}
-	subscriber.name = "Amy Poehler"
-	subscriber.rate = 4.99
-	subscriber.active = true
+type Subscriber struct {
+	Name   string
+	Rate   float64
+	Active bool
+}
 
-	fmt.Println("Name:", subscriber.name)
-	fmt.Println("Rate:", subscriber.rate)
-	fmt.Println("Active:", subscriber.active)
+func main() {
+	sub := defaultSubscriber("Amy Poehler")
+	applyDiscount(sub)
+	printInfo(sub)
+
+	sub2 := defaultSubscriber("Leslie Knope")
+	applyDiscount(sub2)
+	printInfo(sub2)
+
+}
+func printInfo(sub *Subscriber) {
+	fmt.Println("Name:", sub.Name)
+	fmt.Println("Rate:", sub.Rate)
+	fmt.Println("Active?", sub.Active)
+}
+func defaultSubscriber(name string) *Subscriber {
+	var s Subscriber
+	s.Name = name
+	s.Rate = 5.99
+	s.Active = true
+	return &s
+}
+func applyDiscount(s *Subscriber) {
+	s.Rate = 3.99
 }
