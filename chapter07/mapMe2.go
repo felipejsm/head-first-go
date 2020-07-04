@@ -14,4 +14,7 @@ func main() {
 	fmt.Println(value, ok)
 	value, ok = counters["c"]
 	fmt.Println(value, ok)
+	delete(counters, "a")
+	value, ok = counters["a"]
+	fmt.Println(value, ok)
 }
