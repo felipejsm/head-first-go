@@ -6,7 +6,7 @@ type Subscriber struct {
 	Name        string
 	Rate        float64
 	Active      bool
-	HomeAddress Address
+	Address
 }
 type Employee struct {
 	Name        string
@@ -37,7 +37,7 @@ func main() {
 func printInfo(sub *Subscriber) {
 	fmt.Println("Name:", sub.Name)
 	fmt.Println("Rate:", sub.Rate)
-	fmt.Println("Address:"sub.HomeAddress)
+	fmt.Println("Address:"sub.Address)
 	fmt.Println("Active?", sub.Active)
 }
 
