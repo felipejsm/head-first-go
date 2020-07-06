@@ -8,18 +8,18 @@ import (
 )
 
 func main() {
-	date := calendar.Date{}
-	err := date.SetYear(2020)
+	event := calendar.Event{}
+	err := event.SetYear(2020)
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = date.SetMonth(7)
+	err = event.SetMonth(7)
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = date.SetDay(5)
+	err = event.SetDay(5)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(date.Day())
+	fmt.Println(event.Day())
 }
